@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>使用CSS 3.0实现选项卡式新闻块</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;	
+}
+body {
+	font-family: 宋体;
+	font-size: 12px;
+	color: #7799D1;
+	line-height: 24px;
+	background-color: #151736;	
+}
+#box-title {
+	width: 516px;
+	height: 45px;
+	background-image: url(images/104501.jpg);
+	background-repeat: no-repeat;
+	margin: 20px auto 0px auto;
+}
+#box {
+	width: 494px;
+	height: 180px;
+	background-color: #1F2C51;
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+	border-left: 1px solid #253561;
+	border-right: 1px solid #253561;
+	border-bottom: 1px solid #253561;
+}
+#box p{
+	width: 494px;
+	height: 30px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 30px;
+	color: #FFF;
+	display:block;
+	cursor:hand;
+	display:block;
+}
+#tab1 p{
+	z-index:3;
+	width:122px;
+	background-color: #1F2C51;
+	position:absolute;
+	left: 10px;
+	top: 10px;
+	cursor:hand;
+	border-top: 1px solid #29375C;
+	border-left: 1px solid #29375C;
+	border-right: 1px solid #29375C;
+}
+#box ul{
+	position:absolute;
+	width: 494px;
+	display: block;
+	position:absolute;
+	left:10px;
+	top:40px;
+	height:150px;
+	border-top: 1px solid #29375C;
+}
+#tab1 ul{
+	z-index:2;
+}
+#tab1 li {
+	list-style-type: none;
+	background-image: url(images/104502.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 15px;
+	border-bottom: 1px dashed #29375D;	
+}
+#tab2 p{
+	position:absolute;
+	width:122px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	left:132px;
+	top:10px;
+	cursor:hand;
+	border-top: 1px solid #29375C;
+	border-left: 1px solid #29375C;
+	border-right: 1px solid #29375C;
+}
+#tab2 ul{
+	z-index:1;
+	opacity:0;
+}
+#tab2 li {
+	list-style-type: none;
+	background-image: url(images/104502.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 15px;
+	border-bottom: 1px dashed #29375D;	
+}
+#box:hover ul{
+	z-index:0;
+	opacity:0;
+	-webkit-transition: opacity .75s ease-in;
+}
+#tab1:hover p{
+	z-index:4;
+	background-color: #1F2C51;
+	border-top: 1px solid #29375C;
+	border-left: 1px solid #29375C;
+	border-right: 1px solid #29375C;
+}
+#tab1:hover ul{
+	z-index:3;
+	opacity:1;
+	-webkit-transition: opacity 2s ease-in;
+}
+#tab2:hover p{
+	z-index:4;
+	background-color: #1F2C51;
+	border-top: 1px solid #29375C;
+	border-left: 1px solid #29375C;
+	border-right: 1px solid #29375C;
+}
+#tab2:hover ul{
+	z-index:3;
+	opacity:1;
+	-webkit-transition: opacity 2s ease-in;
+}
+</style>
+</head>
+<body>
+<div id="box-title"></div>
+<div id="box">
+  <div id="tab1">
+    <p>游戏新闻</p>
+    <ul>
+      <li>《寻问》2011争霸赛“总冠车”争夺战蓄势待发~~~</li>
+      <li>《寻问》“八月寻缘月”三重豪礼甜蜜奉送，快来抢吧！！！</li>
+      <li>关于80级搭装腰带配方兑换的问题说明</li>
+      <li>《寻问》携手天天管家，超值礼包火热大派送...</li>
+      <li>关于2011超级对抗赛竞猜兑换公告</li>
+      <li>2011超级对抗“商场乐购仙玉返还”活动公告</li>
+    </ul>
+  </div>
+  <div id="tab2">
+    <p>游戏公告</p>
+    <ul>
+      <li>关于80级塔装腰带配方兑换的问题说明</li>
+      <li>关于2011超级对抗赛竞猜兑换公告</li>
+      <li>2011超级对抗“商场乐购仙玉返还”活动公告</li>
+      <li>关于恶意投诉玩家帐号封停处理公告[已更新]</li>
+      <li>8月11日17：45广东区葫芦山临时维护公告</li>
+      <li>8月9日17：45福建区盘陀岭临时维护公告</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

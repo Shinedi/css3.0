@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>media queries</title>
+</head>
+<style>
+#box{
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	background-color: #003399;
+	}
+@media all and (min-width: 300px) {
+	#box {
+		background-color: #003399;
+	}
+}
+@media screen and (max-width: 600px) {
+	#box {
+		background-color: #FF3300;
+	}
+}
+</style>
+<body>
+<div id="box">通过CSS样式判断页面的宽度，从而改变元素背景颜色的大小！</div>
+</body>
+</html>
